@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Conecta/Atendente</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=DM+Serif+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="assets/logo.png">
+</head>
+
+<body>
+
+    <header class="topo">
+
+        <div class="topo-logo">
+            <img src="assets/logo.png" alt="" class="topo-simbolo">
+            <strong>Conecta<span>Libras</span></strong>
+        </div>
+
+        <a href="index.html" class="voltar">
+            ← Início
+        </a>
+
+    </header>
+
+
+    <main class="container atendente-container">
+
+        <section class="titulo-pagina">
+
+            <span class="etiqueta">
+                ÁREA DO ATENDENTE
+            </span>
+
+            <h1>
+                Solicitações dos clientes
+            </h1>
+
+            <p>
+                Visualize as mensagens e envie uma resposta.
+            </p>
+
+        </section>
+
+
+        <!-- STATUS -->
+
+        <section class="status-atendimento">
+
+            <div class="status-indicador"></div>
+
+            <div>
+                <strong>Atendimento conectado</strong>
+
+                <p>
+                    Aguardando solicitações do cliente.
+                </p>
+            </div>
+
+        </section>
+
+
+        <!-- SOLICITAÇÃO -->
+
+        <section class="solicitacao-area">
+
+            <div class="secao-titulo">
+
+                <span>📨</span>
+
+                <div>
+                    <h2>Última solicitação</h2>
+
+                    <p>
+                        Mensagem enviada pelo cliente.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div id="solicitacaoCliente" class="solicitacao-box">
+
+                <span>
+                    Nenhuma solicitação recebida.
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <!-- RESPOSTA -->
+
+        <section class="responder-area">
+
+            <div class="secao-titulo">
+
+                <span>✍️</span>
+
+                <div>
+                    <h2>Responder cliente</h2>
+
+                    <p>
+                        Digite sua resposta abaixo.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <textarea
+                id="campoResposta"
+                placeholder="Digite aqui a resposta para o cliente..."
+                rows="5"
+            ></textarea>
+
+
+            <button
+                id="btnResponder"
+                class="botao-enviar"
+            >
+                📤 Enviar resposta
+            </button>
+
+
+            <div
+                id="respostaEnviada"
+                class="resposta-atendente"
+            >
+                A resposta enviada aparecerá aqui.
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="js/app.js"></script>
+    <script src="js/atendente.js"></script>
+
+</body>
+</html>

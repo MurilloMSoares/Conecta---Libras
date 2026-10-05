@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Conecta/Cliente</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=DM+Serif+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="assets/logo.png">
+</head>
+
+<body>
+
+    <header class="topo">
+
+        <div class="topo-logo">
+            <img src="assets/logo.png" alt="" class="topo-simbolo">
+            <strong>Conecta<span>Libras</span></strong>
+        </div>
+
+        <a href="index.html" class="voltar">
+            ← Início
+        </a>
+
+    </header>
+
+
+    <main class="container">
+
+        <section class="titulo-pagina">
+
+            <span class="etiqueta">
+                ÁREA DO CLIENTE
+            </span>
+
+            <h1>
+                Como podemos ajudar?
+            </h1>
+
+            <p>
+                Escreva, fale ou escolha uma opção rápida.
+            </p>
+
+        </section>
+
+
+        <!-- ÁREA DO MICROFONE -->
+
+        <section class="comunicacao">
+
+            <label class="campo-mensagem-label" for="campoMensagem">
+                Sua mensagem
+            </label>
+
+            <textarea
+                id="campoMensagem"
+                class="campo-mensagem"
+                placeholder="Escreva aqui o que você precisa..."
+                rows="3"
+                maxlength="500"
+            ></textarea>
+
+
+            <div class="microfone-area">
+
+                <button
+                    id="btnMicrofone"
+                    class="microfone"
+                    aria-label="Iniciar ou parar reconhecimento de voz"
+                    title="Iniciar ou parar reconhecimento de voz"
+                >
+
+                    <span id="iconeMicrofone">🎤</span>
+
+                </button>
+
+                <h2 id="statusMicrofone">
+                    Opcional: toque para falar
+                </h2>
+
+                <p>
+                    Se preferir, use o microfone para ditar sua mensagem.
+                </p>
+
+            </div>
+
+
+            <div class="mensagem-cliente">
+
+                <span class="mensagem-label">
+                    SUA MENSAGEM
+                </span>
+
+                <p id="textoTranscrito">
+                    Sua mensagem aparecerá aqui...
+                </p>
+
+            </div>
+
+            <button id="btnEnviar" class="botao-enviar">
+                📤 Enviar mensagem
+            </button>
+
+        </section>
+
+
+        <!-- RESPOSTA DO ATENDENTE -->
+
+        <section class="resposta-area">
+
+            <div class="secao-titulo">
+                <span>💬</span>
+
+                <div>
+                    <h2>Resposta do atendente</h2>
+
+                    <p>
+                        A resposta aparecerá aqui.
+                    </p>
+                </div>
+            </div>
+
+
+            <div id="respostaAtendente" class="resposta-box">
+
+                <span class="resposta-vazia">
+                    Aguardando resposta...
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <!-- ATALHOS -->
+
+        <section class="atalhos">
+
+            <div class="secao-titulo">
+
+                <span>⚡</span>
+
+                <div>
+                    <h2>Atalhos rápidos</h2>
+
+                    <p>
+                        Toque em uma opção para enviar sua solicitação.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="atalhos-grid">
+
+                <button
+                    class="atalho"
+                    data-mensagem="Onde fica o banheiro?"
+                >
+
+                    <span class="atalho-icone">🚻</span>
+
+                    <span>
+                        Onde fica o banheiro?
+                    </span>
+
+                </button>
+
+
+                <button
+                    class="atalho"
+                    data-mensagem="Gostaria de informações sobre os cursos do Senac."
+                >
+
+                    <span class="atalho-icone">🎓</span>
+
+                    <span>
+                        Informações sobre cursos
+                    </span>
+
+                </button>
+
+
+                <button
+                    class="atalho"
+                    data-mensagem="Gostaria de saber os preços e informações sobre matrícula."
+                >
+
+                    <span class="atalho-icone">💰</span>
+
+                    <span>
+                        Preços e matrículas
+                    </span>
+
+                </button>
+
+
+                <button
+                    class="atalho"
+                    data-mensagem="Preciso de ajuda. Tenho uma dúvida."
+                >
+
+                    <span class="atalho-icone">❓</span>
+
+                    <span>
+                        Ajuda / Outras dúvidas
+                    </span>
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- DICIONÁRIO -->
+
+        <section class="dicionario">
+
+            <div class="secao-titulo">
+
+                <span>🤟</span>
+
+                <div>
+                    <h2>Dicionário rápido de Libras</h2>
+
+                    <p>
+                        Consulte vídeos para visualizar alguns sinais.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="libras-grid">
+
+                <article class="libras-card">
+
+                    <div class="video-placeholder" aria-hidden="true">
+                        <span class="video-overlay-label">SINAL EM LIBRAS</span>
+                    </div>
+
+                    <h3>Ajudar</h3>
+
+                    <p>
+                        Vídeo do sinal no SpreadTheSign.
+                    </p>
+
+                    <a
+                        href="https://www.spreadthesign.com/pt.br/word/214/ajudar/0/?q=ajudar"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="video-button"
+                    >
+                        ▶ Assistir sinal
+                    </a>
+
+                </article>
+
+
+                <article class="libras-card">
+
+                    <div class="video-placeholder" aria-hidden="true">
+                        <span class="video-overlay-label">SINAL EM LIBRAS</span>
+                    </div>
+
+                    <h3>Obrigado</h3>
+
+                    <p>
+                        Vídeo do sinal no SpreadTheSign.
+                    </p>
+
+                    <a
+                        href="https://www.spreadthesign.com/pt.br/word/423/obrigado/0/?q=obrigado"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="video-button"
+                    >
+                        ▶ Assistir sinal
+                    </a>
+
+                </article>
+
+
+                <article class="libras-card">
+
+                    <div class="video-placeholder" aria-hidden="true">
+                        <span class="video-overlay-label">SINAL EM LIBRAS</span>
+                    </div>
+
+                    <h3>Banheiro</h3>
+
+                    <p>
+                        Vídeo do sinal no SpreadTheSign.
+                    </p>
+
+                    <a
+                        href="https://www.spreadthesign.com/pt.br/word/605/banheiro/0/?q=banheiro"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="video-button"
+                    >
+                        ▶ Assistir sinal
+                    </a>
+
+                </article>
+
+
+                <article class="libras-card">
+
+                    <div class="video-placeholder" aria-hidden="true">
+                        <span class="video-overlay-label">SINAL EM LIBRAS</span>
+                    </div>
+
+                    <h3>Curso</h3>
+
+                    <p>
+                        Vídeo do sinal no SpreadTheSign.
+                    </p>
+
+                    <a
+                        href="https://www.spreadthesign.com/pt.br/word/7025/curso/0/?q=curso"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="video-button"
+                    >
+                        ▶ Assistir sinal
+                    </a>
+
+                </article>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="js/app.js"></script>
+    <script src="js/cliente.js"></script>
+
+</body>
+</html>
